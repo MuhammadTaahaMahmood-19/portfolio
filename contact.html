@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Muhammad Taaha Mahmood</title>
+</head>
+<body>
+    <!-- Page header and main navigation -->
+    <header>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" aria-current="page">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content unique to this page -->
+    <main>
+        <h1>Contact Me</h1>
+        <p>Complete the form below to get in touch.</p>
+
+        <!-- Contact form fields -->
+        <form>
+            <p>All fields are required. Enter your phone number as 10 digits.</p>
+
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"
+                    autocomplete="name" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"
+                    autocomplete="email" required>
+            </p>
+
+            <p>
+                <label for="phone">Cell Number (10 digits, no spaces):</label>
+                <!-- Accept exactly 10 digits -->
+                <input type="tel" id="phone" name="phone"
+                    autocomplete="tel" pattern="[0-9]{10}"
+                    title="Enter exactly 10 digits without spaces or dashes."
+                    required>
+            </p>
+
+            <p>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments"
+                        rows="5" required></textarea>
+            </p>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <!-- Contact details and copyright -->
+    <footer>
+    </footer>
+</body>
+</html>
