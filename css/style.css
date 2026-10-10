@@ -167,13 +167,6 @@ footer p {
     margin: 8px 0;
 }
 
-video {
-    display: block;
-    width: 100%;
-    max-width: 640px;
-    height: auto;
-    margin: 24px 0;
-}
 
 header {
     background-image: linear-gradient(to right, #0F172A, #1D4ED8);
@@ -198,4 +191,75 @@ article h2 {
 
 article p:last-child {
     margin-bottom: 0;
+}
+
+.home-buttons {
+    margin: 28px 0;
+}
+
+.home-buttons a {
+    display: inline-block;
+    background-color: #1D4ED8;
+    color: #F8FAFC;
+    padding: 12px 22px;
+    margin: 0 10px 12px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-buttons a:hover {
+    background-color: #0F172A;
+}
+
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
+    align-self: start;
+}
+
+.about-media {
+    margin: 24px 0;
+}
+
+main .about-media img {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+}
+
+main .about-media video {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: #0F172A;
+}
+
+@media screen and (min-width: 768px) {
+    main .about-media img {
+        display: inline-block;
+        width: 35%;
+        max-width: none;
+        margin: 0 3% 0 0;
+        vertical-align: middle;
+    }
+
+    main .about-media video {
+        display: inline-block;
+        width: 60%;
+        max-width: none;
+        margin: 0;
+        vertical-align: middle;
+    }
 }

@@ -32,3 +32,44 @@ form {
 button {
     width: 100%;
 }
+
+.about-media {
+    margin: 24px 0;
+}
+
+main .about-media img {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+}
+
+main .about-media video {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: #0F172A;
+}
+
+@media screen and (min-width: 768px) {
+    main .about-media img {
+        display: inline-block;
+        width: 35%;
+        max-width: none;
+        margin: 0 3% 0 0;
+        vertical-align: middle;
+    }
+
+    main .about-media video {
+        display: inline-block;
+        width: 60%;
+        max-width: none;
+        margin: 0;
+        vertical-align: middle;
+    }
+}
