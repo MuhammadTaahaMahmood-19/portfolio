@@ -166,3 +166,19 @@ footer {
 footer p {
     margin: 8px 0;
 }
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 24px 0;
+}
+
+header {
+    background-image: linear-gradient(to right, #0F172A, #1D4ED8);
+}
+
+footer {
+    background-image: linear-gradient(135deg, #0F172A, #1D4ED8);
+}
