@@ -1,22 +1,32 @@
+/*
+   Mobile stylesheet: applied through the HTML link's media query
+   only when the screen viewport is 767px wide or narrower.
+*/
+
+/* Use most of the screen width with compact spacing and centred content. */
 main {
     width: 94%;
     margin: 20px auto;
     padding: 12px;
 }
 
+/* Reduce header and footer padding on narrow screens. */
 header,
 footer {
     padding: 16px 10px;
 }
 
+/* Reduce navigation item spacing to help the links fit or wrap. */
 nav li {
     margin: 4px 0;
 }
 
+/* Keep navigation links padded while using less horizontal space. */
 nav a {
     padding: 10px;
 }
 
+/* Reduce heading sizes for smaller screens. */
 h1 {
     font-size: 1.75rem;
 }
@@ -25,18 +35,22 @@ h2 {
     font-size: 1.25rem;
 }
 
+/* Reduce the form's internal spacing to leave more room for its fields. */
 form {
     padding: 16px;
 }
 
+/* Make the form's Submit button fill its container width. */
 button {
     width: 100%;
 }
 
+/* Separate the About Me media group from surrounding content. */
 .about-media {
     margin: 24px 0;
 }
 
+/* Stack and centre the photograph above the video, preserving proportions. */
 main .about-media img {
     display: block;
     width: 80%;
@@ -46,6 +60,7 @@ main .about-media img {
     border-radius: 12px;
 }
 
+/* Make the video fit the available width without distorting its proportions. */
 main .about-media video {
     display: block;
     width: 100%;
@@ -56,6 +71,11 @@ main .about-media video {
     background-color: #0F172A;
 }
 
+/*
+   Redundant block retained from the original file:
+   this minimum width cannot coincide with the HTML link's maximum
+   width of 767px. The equivalent rules in style.css handle wider screens.
+*/
 @media screen and (min-width: 768px) {
     main .about-media img {
         display: inline-block;

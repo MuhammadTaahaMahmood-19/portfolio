@@ -1,80 +1,125 @@
 <!DOCTYPE html>
+<!-- Declare English as the page language for assistive technology. -->
 <html lang="en">
 <head>
+    <!-- Use UTF-8 encoding to support text characters and symbols. -->
     <meta charset="UTF-8">
+
+    <!-- Match the viewport to the device width for responsive layouts. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Identify the Contact Me page in the browser tab. -->
     <title>Contact Me | Muhammad Taaha Mahmood</title>
+
+    <!-- Load shared styles before viewport-specific styles. -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Mobile styles apply to screen widths up to 767px. -->
     <link rel="stylesheet" href="css/mobile.css"
         media="screen and (max-width: 767px)">
+
+    <!-- Tablet styles apply to screen widths from 768px to 1023px. -->
     <link rel="stylesheet" href="css/tablet.css"
         media="screen and (min-width: 768px) and (max-width: 1023px)">
+
+    <!-- Laptop styles apply to screen widths of 1024px and above. -->
     <link rel="stylesheet" href="css/laptop.css"
         media="screen and (min-width: 1024px)">
 </head>
 <body>
-    <!-- Page header and main navigation -->
+    <!-- Shared header and navigation connecting all four pages. -->
     <header>
         <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
+
+                <!-- Mark Contact Me as the current page for accessibility and styling. -->
                 <li><a href="contact.html" aria-current="page">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main content unique to this page -->
+    <!-- Main content contains contact instructions and the form. -->
     <main>
         <h1>Contact Me</h1>
         <p>Complete the form below to get in touch.</p>
 
-        <!-- Contact form fields -->
-        <form>
+        <!-- Inform visitors that an external service processes their submissions. -->
+        <p>
+            Messages are processed by FormSubmit and forwarded to my email.
+        </p>
+
+        <!--
+            FormSubmit integration: https://formsubmit.co/
+            The action specifies the processing endpoint.
+            POST sends named form values in the request body.
+            Browser validation checks the fields before normal submission.
+        -->
+        <form action="https://formsubmit.co/mtaahamahmood.official@outlook.com"
+              method="POST">
             <p>All fields are required. Enter your phone number as 10 digits.</p>
 
+            <!-- FormSubmit uses this hidden field as the notification email subject. -->
+            <input type="hidden" name="_subject"
+                   value="New message from my portfolio">
+
+            <!--
+                The label's for attribute matches the input's id.
+                name identifies the submitted value.
+                autocomplete suggests suitable saved details.
+                required prevents an empty field from being submitted.
+            -->
             <p>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name"
-                    autocomplete="name" required>
+                       autocomplete="name" required>
             </p>
 
+            <!-- Email validation checks basic formatting, not whether the address exists. -->
             <p>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email"
-                    autocomplete="email" required>
+                       autocomplete="email" required>
             </p>
 
+            <!--
+                type="tel" identifies a telephone field but does not validate its format.
+                The pattern requires exactly ten digits, without spaces or dashes.
+                The visible label and title explain the expected format.
+            -->
             <p>
                 <label for="phone">Cell Number (10 digits, no spaces):</label>
-                <!-- Accept exactly 10 digits -->
                 <input type="tel" id="phone" name="phone"
-                    autocomplete="tel" pattern="[0-9]{10}"
-                    title="Enter exactly 10 digits without spaces or dashes."
-                    required>
+                       autocomplete="tel" pattern="[0-9]{10}"
+                       title="Enter exactly 10 digits without spaces or dashes."
+                       required>
             </p>
 
+            <!-- Provide a required multiline message field with five visible rows initially. -->
             <p>
                 <label for="comments">Comments:</label>
                 <textarea id="comments" name="comments"
-                        rows="5" required></textarea>
+                          rows="5" required></textarea>
             </p>
 
+            <!-- Submit the form after the browser's validation checks succeed. -->
             <button type="submit">Submit</button>
         </form>
     </main>
 
-    <!-- Contact details and copyright -->
+    <!-- Shared footer containing contact details and copyright information. -->
     <footer>
         <p>
             Email:
+            <!-- Open the visitor's configured email application with this recipient. -->
             <a href="mailto:mtaahamahmood.official@outlook.com">
                 mtaahamahmood.official@outlook.com
             </a>
         </p>
 
-        <p>&copy; 2026 Muhammad Taaha Mahmood. All rights reserved.</p>
+        <p>© 2026 Muhammad Taaha Mahmood. All rights reserved.</p>
     </footer>
 </body>
 </html>

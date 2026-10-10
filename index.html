@@ -1,22 +1,38 @@
 <!DOCTYPE html>
+
+<!-- Declare English as the page language for browsers and assistive technology. -->
 <html lang="en">
+
 <head>
+    <!-- UTF-8 supports text characters and symbols such as the copyright symbol. -->
     <meta charset="UTF-8">
+
+    <!-- Match the viewport to the device width for responsive layouts. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the title displayed in the browser tab. -->
     <title>Home | Muhammad Taaha Mahmood</title>
+
+    <!-- Load shared styles before the viewport-specific stylesheets. -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css"
-        media="screen and (max-width: 767px)">
-    <link rel="stylesheet" href="css/tablet.css"
-        media="screen and (min-width: 768px) and (max-width: 1023px)">
-    <link rel="stylesheet" href="css/laptop.css"
-        media="screen and (min-width: 1024px)">
+
+    <!-- Apply mobile styles to screen widths up to 767px. -->
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+
+    <!-- Apply tablet styles to screen widths from 768px to 1023px. -->
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1023px)">
+
+    <!-- Apply laptop and larger-screen styles at widths of 1024px or more. -->
+    <link rel="stylesheet" href="css/laptop.css" media="screen and (min-width: 1024px)">
 </head>
+
 <body>
-    <!-- Page header and main navigation -->
+    <!-- Shared header containing navigation to all four pages. -->
     <header>
+        <!-- Give the navigation landmark an accessible name. -->
         <nav aria-label="Main navigation">
             <ul>
+                <!-- Identify Home as the current page for assistive technology and CSS styling. -->
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -25,7 +41,7 @@
         </nav>
     </header>
 
-    <!-- Main content unique to this page -->
+    <!-- Main page content: personal introduction and links to other sections. -->
     <main>
         <h1>Muhammad Taaha Mahmood</h1>
         <h2>Welcome to My Portfolio</h2>
@@ -37,6 +53,7 @@
             and provides a way to contact me.
         </p>
 
+        <!-- These anchors navigate to other pages; CSS gives them a button appearance. -->
         <div class="home-buttons">
             <a href="about.html">About Me</a>
             <a href="projects.html">My Projects</a>
@@ -44,15 +61,17 @@
         </div>
     </main>
 
-    <!-- Contact details and copyright -->
+    <!-- Shared footer containing contact details and copyright information. -->
     <footer>
         <p>
             Email:
+            <!-- Open the visitor's configured email application with the recipient filled in. -->
             <a href="mailto:mtaahamahmood.official@outlook.com">
                 mtaahamahmood.official@outlook.com
             </a>
         </p>
 
+        <!-- The &copy; character reference displays the copyright symbol. -->
         <p>&copy; 2026 Muhammad Taaha Mahmood. All rights reserved.</p>
     </footer>
 </body>

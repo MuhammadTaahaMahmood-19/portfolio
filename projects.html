@@ -1,38 +1,60 @@
 <!DOCTYPE html>
+
+<!-- Declare English as the page language for assistive technology. -->
 <html lang="en">
+
 <head>
+    <!-- Use UTF-8 encoding to support text characters and symbols. -->
     <meta charset="UTF-8">
+
+    <!-- Match the viewport to the device width for responsive layouts. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Identify the Projects page in the browser tab. -->
     <title>Projects | Muhammad Taaha Mahmood</title>
+
+    <!-- Load shared styles before viewport-specific styles. -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css"
-        media="screen and (max-width: 767px)">
-    <link rel="stylesheet" href="css/tablet.css"
-        media="screen and (min-width: 768px) and (max-width: 1023px)">
-    <link rel="stylesheet" href="css/laptop.css"
-        media="screen and (min-width: 1024px)">
+
+    <!-- Mobile styles apply to screen widths up to 767px. -->
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+
+    <!-- Tablet styles apply to screen widths from 768px to 1023px. -->
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1023px)">
+
+    <!-- Laptop styles apply to screen widths of 1024px and above. -->
+    <link rel="stylesheet" href="css/laptop.css" media="screen and (min-width: 1024px)">
 </head>
+
 <body>
-    <!-- Page header and main navigation -->
+    <!-- Shared header and navigation connecting all four pages. -->
     <header>
         <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
+
+                <!-- Mark Projects as the current page for accessibility and styling. -->
                 <li><a href="projects.html" aria-current="page">Projects</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main content unique to this page -->
+    <!-- Main content introduces the collection of academic work. -->
     <main>
         <h1>My Projects</h1>
         <p>
             A selection of my academic projects, programming assignments,
             and technical reports.
         </p>
-        
+
+        <!--
+            Each article is a self-contained entry with a heading,
+            relevant technologies or course, a description, and a repository link.
+        -->
+
+        <!-- Project 1: the portfolio website itself. -->
         <article>
             <h2>Personal Portfolio Website</h2>
             <p><strong>Technologies:</strong> HTML5, CSS3, Git, GitHub</p>
@@ -43,12 +65,14 @@
                 and HTML form validation while tracking development with Git.
             </p>
             <p>
+                <!-- Descriptive link text identifies the destination repository. -->
                 <a href="https://github.com/MuhammadTaahaMahmood-19/portfolio">
                     View the Portfolio Website on GitHub
                 </a>
             </p>
         </article>
 
+        <!-- Project 2: a four-site network simulation in Cisco Packet Tracer. -->
         <article>
             <h2>Multi-Site Network Simulation</h2>
             <p><strong>Tool:</strong> Cisco Packet Tracer</p>
@@ -66,6 +90,7 @@
             </p>
         </article>
 
+        <!-- Project 3: the mathematical report accompanying the chess engine. -->
         <article>
             <h2>Chess and Graph Theory Report</h2>
             <p><strong>Course:</strong> Discrete Mathematics</p>
@@ -82,6 +107,7 @@
             </p>
         </article>
 
+        <!-- Project 4: a Python chess application with an AI opponent. -->
         <article>
             <h2>AI Chess Engine with Pygame GUI</h2>
             <p><strong>Tools:</strong> Python, Pygame, python-chess</p>
@@ -98,6 +124,7 @@
             </p>
         </article>
 
+        <!-- Project 5: a data structures assignment exploring shared array storage. -->
         <article>
             <h2>Three Stacks in a Single Array</h2>
             <p><strong>Language:</strong> Python</p>
@@ -113,21 +140,19 @@
                 </a>
             </p>
         </article>
-
-        
-
-        
     </main>
 
-    <!-- Contact details and copyright -->
+    <!-- Shared footer containing contact details and copyright information. -->
     <footer>
         <p>
             Email:
+            <!-- Open the visitor's configured email application with this recipient. -->
             <a href="mailto:mtaahamahmood.official@outlook.com">
                 mtaahamahmood.official@outlook.com
             </a>
         </p>
 
+        <!-- Render the copyright symbol using its HTML character reference. -->
         <p>&copy; 2026 Muhammad Taaha Mahmood. All rights reserved.</p>
     </footer>
 </body>

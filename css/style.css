@@ -1,3 +1,4 @@
+/* Shared colours, typography, and default page spacing. */
 body {
     margin: 0;
     background-color: #F8FAFC;
@@ -6,6 +7,7 @@ body {
     line-height: 1.6;
 }
 
+/* Give the header and footer a dark background with light text. */
 header,
 footer {
     background-color: #0F172A;
@@ -13,29 +15,35 @@ footer {
     padding: 20px;
 }
 
+/* Keep navigation and footer links readable on dark backgrounds. */
 nav a,
 footer a {
     color: #F8FAFC;
 }
 
+/* Emphasize the current page; a later rule also sets its background colour. */
 nav a[aria-current="page"] {
     color: #DBEAFE;
     font-weight: bold;
 }
 
+/* Default inner spacing for the main content area. */
 main {
     padding: 24px;
 }
 
+/* Use royal blue for page and section headings. */
 h1,
 h2 {
     color: #1D4ED8;
 }
 
+/* Default link colour within the main content. */
 main a {
     color: #1D4ED8;
 }
 
+/* Style form buttons and inherit the surrounding font settings. */
 button {
     background-color: #1D4ED8;
     color: #F8FAFC;
@@ -45,10 +53,12 @@ button {
     cursor: pointer;
 }
 
+/* Darken buttons when the pointer is over them. */
 button:hover {
     background-color: #0F172A;
 }
 
+/* Shared appearance for input fields and multiline text areas. */
 input,
 textarea {
     background-color: #DBEAFE;
@@ -58,10 +68,12 @@ textarea {
     font: inherit;
 }
 
+/* Include padding and borders within each element's specified dimensions. */
 * {
     box-sizing: border-box;
 }
 
+/* Remove list bullets and default spacing; centre the navigation items. */
 nav ul {
     list-style: none;
     margin: 0;
@@ -69,11 +81,13 @@ nav ul {
     text-align: center;
 }
 
+/* Place navigation items beside one another while allowing wrapping. */
 nav li {
     display: inline-block;
     margin: 5px;
 }
 
+/* Create padded, rounded clickable areas for navigation links. */
 nav a {
     display: inline-block;
     padding: 10px 16px;
@@ -81,12 +95,17 @@ nav a {
     text-decoration: none;
 }
 
+/* Highlight hovered links and the link marked as the current page. */
 nav a:hover,
 nav a[aria-current="page"] {
     background-color: #1D4ED8;
     color: #F8FAFC;
 }
 
+/*
+   Use a fluid width with a maximum to limit long lines on wide screens.
+   Automatic horizontal margins centre the main content.
+*/
 main {
     width: 90%;
     max-width: 1100px;
@@ -94,6 +113,7 @@ main {
     padding: 24px;
 }
 
+/* Heading sizes use rem units, which are relative to the root font size. */
 h1 {
     font-size: 2rem;
     margin-top: 0;
@@ -105,10 +125,12 @@ h2 {
     margin-bottom: 12px;
 }
 
+/* Separate paragraphs vertically. */
 p {
     margin-bottom: 20px;
 }
 
+/* Prevent images from exceeding their container and preserve proportions. */
 main img {
     max-width: 100%;
     height: auto;
@@ -116,6 +138,7 @@ main img {
     margin-bottom: 20px;
 }
 
+/* Place the contact form inside a bordered container with a limited width. */
 form {
     max-width: 650px;
     padding: 24px;
@@ -124,12 +147,14 @@ form {
     border-radius: 12px;
 }
 
+/* Put each label on its own line above its associated field. */
 label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
 }
 
+/* Make visible form fields fill the available container width. */
 input,
 textarea {
     display: block;
@@ -137,14 +162,17 @@ textarea {
     border-radius: 6px;
 }
 
+/* Allow vertical resizing without letting the text area become wider. */
 textarea {
     resize: vertical;
 }
 
+/* Add rounded corners to form buttons. */
 button {
     border-radius: 6px;
 }
 
+/* Show a clear focus outline for keyboard navigation. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -153,29 +181,34 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
+/* Use a lighter focus outline against the dark header and footer. */
 nav a:focus-visible,
 footer a:focus-visible {
     outline-color: #DBEAFE;
 }
 
+/* Centre footer content and allow long email addresses to wrap. */
 footer {
     text-align: center;
     overflow-wrap: anywhere;
 }
 
+/* Keep footer paragraphs more closely spaced than main-content paragraphs. */
 footer p {
     margin: 8px 0;
 }
 
-
+/* Required horizontal linear gradient: navy to royal blue. */
 header {
     background-image: linear-gradient(to right, #0F172A, #1D4ED8);
 }
 
+/* Required angled linear gradient, using a direction of 135 degrees. */
 footer {
     background-image: linear-gradient(135deg, #0F172A, #1D4ED8);
 }
 
+/* Present each project article as a separate card with a blue left border. */
 article {
     background-color: #FFFFFF;
     border: 1px solid #DBEAFE;
@@ -185,18 +218,25 @@ article {
     margin-bottom: 24px;
 }
 
+/* Avoid extra space above project headings. */
 article h2 {
     margin-top: 0;
 }
 
+/* Remove the final paragraph's bottom margin inside each project card. */
 article p:last-child {
     margin-bottom: 0;
 }
 
+/* Space the Home page's navigation buttons away from the introduction. */
 .home-buttons {
     margin: 28px 0;
 }
 
+/*
+   Style navigation anchors as buttons.
+   Inline-block places them side by side and allows wrapping when necessary.
+*/
 .home-buttons a {
     display: inline-block;
     background-color: #1D4ED8;
@@ -208,25 +248,34 @@ article p:last-child {
     font-weight: bold;
 }
 
+/* Darken Home page buttons on hover. */
 .home-buttons a:hover {
     background-color: #0F172A;
 }
 
-
+/*
+   Create three Grid rows for header, main, and footer.
+   The middle row takes the remaining space, keeping the footer at the
+   bottom of short pages. Longer pages expand naturally.
+   These declarations supplement the earlier body rule.
+*/
 body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
+/* Keep the main element at the start of its Grid row instead of stretching. */
 main {
     align-self: start;
 }
 
+/* Separate the About Me media group from surrounding content. */
 .about-media {
     margin: 24px 0;
 }
 
+/* Default narrow-screen layout: centre the photograph above the video. */
 main .about-media img {
     display: block;
     width: 80%;
@@ -236,6 +285,7 @@ main .about-media img {
     border-radius: 12px;
 }
 
+/* Make the video fluid while preserving its proportions and limiting width. */
 main .about-media video {
     display: block;
     width: 100%;
@@ -246,7 +296,9 @@ main .about-media video {
     background-color: #0F172A;
 }
 
+/* At tablet widths and above, place the photograph and video side by side. */
 @media screen and (min-width: 768px) {
+    /* Reserve 35% for the photograph and leave a gap to its right. */
     main .about-media img {
         display: inline-block;
         width: 35%;
@@ -255,6 +307,7 @@ main .about-media video {
         vertical-align: middle;
     }
 
+    /* Give the video 60% of the media container and align it vertically. */
     main .about-media video {
         display: inline-block;
         width: 60%;

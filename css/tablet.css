@@ -1,17 +1,27 @@
+/*
+   Tablet stylesheet: applied through the HTML link's media query
+   at screen viewport widths from 768px to 1023px.
+   These rules supplement or override the shared styles in style.css.
+*/
+
+/* Use a fluid content width, centred horizontally, with moderate spacing. */
 main {
     width: 90%;
     margin: 28px auto;
     padding: 24px;
 }
 
+/* Increase navigation link padding for the wider tablet layout. */
 nav a {
     padding: 12px 20px;
 }
 
+/* Size the main heading relative to the root font size. */
 h1 {
     font-size: 2.25rem;
 }
 
+/* Fill the available width while retaining the shared 650px maximum. */
 form {
     width: 100%;
 }

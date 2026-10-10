@@ -1,23 +1,39 @@
 <!DOCTYPE html>
+
+<!-- Declare English as the page language for assistive technology. -->
 <html lang="en">
+
 <head>
+    <!-- Support text characters and symbols using UTF-8 encoding. -->
     <meta charset="UTF-8">
+
+    <!-- Match the viewport to the device width for responsive layouts. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Identify the About Me page in the browser tab. -->
     <title>About Me | Muhammad Taaha Mahmood</title>
+
+    <!-- Load shared styles before viewport-specific styles. -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css"
-        media="screen and (max-width: 767px)">
-    <link rel="stylesheet" href="css/tablet.css"
-        media="screen and (min-width: 768px) and (max-width: 1023px)">
-    <link rel="stylesheet" href="css/laptop.css"
-        media="screen and (min-width: 1024px)">
+
+    <!-- Mobile styles apply to screen widths up to 767px. -->
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+
+    <!-- Tablet styles apply to screen widths from 768px to 1023px. -->
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1023px)">
+
+    <!-- Laptop styles apply to screen widths of 1024px and above. -->
+    <link rel="stylesheet" href="css/laptop.css" media="screen and (min-width: 1024px)">
 </head>
+
 <body>
-    <!-- Page header and main navigation -->
+    <!-- Shared header and navigation connecting all four pages. -->
     <header>
         <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
+
+                <!-- Mark About Me as the current page for accessibility and styling. -->
                 <li><a href="about.html" aria-current="page">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
@@ -25,34 +41,39 @@
         </nav>
     </header>
 
-
-    
-    <!-- Main content unique to this page -->
+    <!-- Main content presents personal media, background, and interests. -->
     <main>
-            
         <h1>About Me</h1>
 
-        <!-- Personal photograph -->
+        <!-- CSS places the media side by side on wider screens and stacks it on mobile. -->
         <div class="about-media">
-            <img src="images/profile.png"
-                alt="Muhammad Taaha Mahmood wearing a graduation cap and gown">
+            <!-- Alternative text describes the photograph when it cannot be seen. -->
+            <img src="images/profile.png" alt="Muhammad Taaha Mahmood wearing a graduation cap and gown">
 
-            <video controls
-                poster="images/vidPoster.png"
-                preload="metadata"
-                aria-label="Introduction by Muhammad Taaha Mahmood">
+            <!--
+                controls provides native playback controls.
+                poster displays a preview image before playback.
+                preload="metadata" requests basic video information as a loading hint.
+                aria-label gives the video an accessible name.
+            -->
+            <video controls poster="images/vidPoster.png" preload="metadata" aria-label="Introduction by Muhammad Taaha Mahmood">
+
+                <!-- Specify the recording's relative file path and media type. -->
                 <source src="videos/intro.mp4" type="video/mp4">
+
+                <!-- Fallback text for browsers that do not support the video element. -->
                 Your browser does not support HTML5 video.
             </video>
         </div>
 
-        <!-- Background, interests, and career goal -->
+        <!-- Academic background and expected graduation date. -->
         <p>
             I am a third-year Bachelor of Information Technology student
             at Ontario Tech University, with an expected graduation date
             of April 2028.
         </p>
 
+        <!-- Areas of interest and current practical learning. -->
         <p>
             My studies focus on networking and IT security, and I am
             particularly interested in cloud security and risk management.
@@ -60,23 +81,25 @@
             cloud security to strengthen my practical skills.
         </p>
 
+        <!-- Career goal and intended contribution to an organization. -->
         <p>
             My career goal is to join an organization that values its
             employees and contribute to protecting its systems and
             information as part of its IT team.
         </p>
-
     </main>
 
-    <!-- Contact details and copyright -->
+    <!-- Shared footer containing contact details and copyright information. -->
     <footer>
         <p>
             Email:
+            <!-- Open the visitor's configured email application with this recipient. -->
             <a href="mailto:mtaahamahmood.official@outlook.com">
                 mtaahamahmood.official@outlook.com
             </a>
         </p>
 
+        <!-- Render the copyright symbol using its HTML character reference. -->
         <p>&copy; 2026 Muhammad Taaha Mahmood. All rights reserved.</p>
     </footer>
 </body>
